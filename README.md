@@ -3,7 +3,7 @@
 DeutschBlitz, interaktif ve eğlenceli bir Almanca öğrenme platformudur. Flashcardlar, quizler ve oyunlaştırılmış içeriklerle dil öğrenimini keyifli hale getirir. ASP.NET Core MVC mimarisi üzerine modern bir arayüz ile inşa edilmiştir.
 
 <!-- GitHub Demo Button -->
-[![Canlı Demo](https://img.shields.io/badge/Canlı%20Demo-Ziyaret%20Et-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://deutschblitz-demo.com)
+[![Canlı Demo](https://img.shields.io/badge/Canlı%20Demo-Ziyaret%20Et-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://erdemalpar.github.io/nililealmanca/)
 
 *(Not: Demo linki örnektir, canlı bir URL ile değiştirilebilir.)*
 
