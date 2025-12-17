@@ -35,8 +35,8 @@ Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyi
 
 1.  **Projeyi Klonlayın:**
     ```bash
-    git clone https://github.com/kullaniciadi/deutschblitz.git
-    cd deutschblitz
+    git clone https://github.com/erdemalpar/nililealmanca.git
+    cd nililealmanca
     ```
 
 2.  **Bağımlılıkları Yükleyin:**
