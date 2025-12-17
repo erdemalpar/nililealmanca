@@ -1,0 +1,34 @@
+@model List<GermanLearningApp.Mvc.Models.User>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-info">Henüz kayıtlı öğrenci bulunmamaktadır.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Kullanıcı Adı</th>
+                    <th>Sınıf</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var student in Model)
+                {
+                    <tr>
+                        <td class="fw-bold">@student.Username</td>
+                        <td><span class="badge bg-secondary">@student.Class</span></td>
+                        <td>
+                            <button class="btn btn-primary btn-sm rounded-pill" onclick="loadPermissions('@student.Username')">
+                                <i class="bi bi-shield-lock"></i> İzinleri Yönet
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

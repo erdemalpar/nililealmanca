@@ -1,0 +1,77 @@
+@model GermanLearningApp.Mvc.Models.User
+
+<div class="p-4">
+    <div class="d-flex align-items-center mb-4 border-bottom pb-3">
+        <button class="btn btn-outline-secondary btn-sm me-3 rounded-circle" onclick="loadStudentList()">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        <div>
+            <h5 class="mb-0 text-primary fw-bold">Yetkilendirme</h5>
+            <span class="text-muted small">Öğrenci: <span class="text-dark fw-bold">@Model.Username</span></span>
+        </div>
+    </div>
+
+    <div class="alert alert-info py-2 small mb-4">
+        <i class="bi bi-info-circle me-1"></i> Kullanıcının erişebileceği sayfaları seçin.
+    </div>
+
+    <form id="permissionsForm">
+        <input type="hidden" id="permUsername" value="@Model.Username" />
+        
+        <div class="row g-3">
+            @{
+                var allLessons = ViewBag.AllLessons as List<GermanLearningApp.Mvc.Models.Lesson>;
+            }
+
+            @if (allLessons != null)
+            {
+                foreach (var lesson in allLessons)
+                {
+                    var path = $"/lesson/details/{lesson.Id}";
+                    bool isChecked = Model.AllowedPages != null && Model.AllowedPages.Contains(path.ToLower());
+                    
+                    <div class="col-md-6">
+                        <div class="form-check form-switch p-3 bg-white border rounded shadow-sm hover-effect position-relative">
+                            <input class="form-check-input" type="checkbox" id="chk_@lesson.Id" value="@path" @(isChecked ? "checked" : "")>
+                            <label class="form-check-label w-100 stretched-link cursor-pointer" for="chk_@lesson.Id">
+                                <span class="fw-bold text-dark">@lesson.Title</span>
+                            </label>
+                        </div>
+                    </div>
+                }
+            }
+            
+             <!-- Add General Quiz as an option -->
+             <div class="col-md-6">
+                @{
+                    var quizPath = "/quiz/generalquiz";
+                    bool isQuizChecked = Model.AllowedPages != null && Model.AllowedPages.Contains(quizPath.ToLower());
+                }
+                <div class="form-check form-switch p-3 bg-white border rounded shadow-sm hover-effect position-relative">
+                    <input class="form-check-input" type="checkbox" id="chk_quiz" value="@quizPath" @(isQuizChecked ? "checked" : "")>
+                    <label class="form-check-label w-100 stretched-link cursor-pointer" for="chk_quiz">
+                        <span class="fw-bold text-dark">🏆 Genel Değerlendirme Sınavı</span>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="mt-4 pt-3 border-top text-end">
+        <button type="button" class="btn btn-secondary rounded-pill px-4 me-2" onclick="loadStudentList()">İptal</button>
+        <button type="button" class="btn btn-success rounded-pill px-4" onclick="savePermissions()">
+            <i class="bi bi-save me-1"></i> Kaydet
+        </button>
+    </div>
+</div>
+
+<style>
+    .hover-effect:hover {
+        background-color: #e9ECEF !important;
+        transition: background-color 0.2s;
+    }
+    .cursor-pointer {
+        cursor: pointer;
+    }
+</style>

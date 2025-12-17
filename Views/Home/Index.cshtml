@@ -1,0 +1,153 @@
+﻿@model GermanLearningApp.Mvc.Controllers.DashboardViewModel
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div id="main-grid" class="grid grid-cols-1 lg:grid-cols-12 lg:gap-8 w-full px-4 lg:px-0">
+    
+    <!-- 1. Sol Panel: Kelimeler (Vocabulary Section) -->
+    <div class="lg:col-span-3 space-y-8 mb-8 lg:mb-0">
+        <section id="kelimeler" class="bg-white p-6 rounded-2xl shadow-xl border-4 border-pink-300">
+            <h2 class="text-xl font-extrabold text-purple-900 text-center mb-6 border-b-2 border-pink-200 pb-3">
+                Kelime Kartları 🌈
+            </h2>
+            <div class="flex flex-col items-center">
+                <!-- Flashcard Container handled by JS -->
+                <div id="flashcard-container" class="w-full h-72 mb-6 perspective-1000 cursor-pointer">
+                    <!-- Initial Card (Will be populated/replaced by JS but good for SEO/NoJS) -->
+                    @if(Model.Vocabulary.Any())
+                    {
+                        var first = Model.Vocabulary.First();
+                         <div class="relative w-full h-full transition-transform duration-700 transform-style-3d rounded-2xl shadow-xl" id="flashcard-inner">
+                            <!-- Front -->
+                            <div class="absolute w-full h-full backface-hidden bg-gradient-to-tr from-purple-700 via-cyan-500 to-pink-500 rounded-2xl flex flex-col items-center justify-center p-4 text-white border-b-4 border-purple-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-yellow-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+                                <p class="text-4xl sm:text-5xl font-extrabold mb-2 drop-shadow-md text-center" id="card-german">@first.German</p>
+                                <p class="text-sm sm:text-base opacity-80 font-light">(Almanca Kelime)</p>
+                                <button onclick="event.stopPropagation(); speakText('@first.German')" class="mt-4 px-4 py-1.5 bg-yellow-300 text-purple-700 rounded-full text-xs sm:text-sm font-bold shadow-lg hover:bg-yellow-200 transition transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-400">
+                                    Dinle
+                                </button>
+                            </div>
+                            <!-- Back -->
+                            <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-white border-4 border-pink-400 rounded-2xl flex flex-col items-center justify-center p-4 text-gray-800 shadow-xl">
+                                <p class="text-2xl sm:text-3xl font-black mb-2 text-pink-700 text-center" id="card-turkish">@first.Turkish</p>
+                                <p class="text-xs sm:text-sm italic text-gray-500 mb-4">(Türkçe Çeviri)</p>
+                                <div class="text-center p-3 bg-yellow-50 rounded-xl max-w-sm border border-yellow-200">
+                                    <p class="font-semibold text-gray-700 mb-1 text-sm">Örnek Cümle:</p>
+                                    <p class="text-purple-600 text-sm sm:text-base italic" id="card-example">@first.Example</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex w-full gap-2 px-1">
+                    <button id="prev-card-btn" class="flex-1 px-2 py-2 bg-purple-200 text-purple-800 rounded-xl font-bold text-xs sm:text-sm hover:bg-purple-300 transition duration-300 shadow-md flex items-center justify-center transform active:scale-95 focus:outline-none focus:ring-4 focus:ring-purple-400">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        <span class="hidden sm:inline">Önceki</span>
+                        <span class="sm:hidden">Geri</span>
+                    </button>
+                    <button id="next-card-btn" class="flex-1 px-2 py-2 bg-pink-600 text-white rounded-xl font-bold text-xs sm:text-sm hover:bg-pink-700 transition duration-300 shadow-xl flex items-center justify-center transform active:scale-95 focus:outline-none focus:ring-4 focus:ring-pink-400">
+                        <span class="hidden sm:inline">Sonraki</span>
+                        <span class="sm:hidden">İleri</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </div>
+                <p class="mt-4 text-xs text-gray-500 font-medium">
+                    <span id="current-card-idx">1</span> / <span id="total-card-count">@Model.Vocabulary.Count</span>
+                </p>
+            </div>
+        </section>
+        
+        <!-- Combined Flags Image -->
+        <div class="flex justify-center mt-8 cursor-pointer transform hover:scale-105 transition duration-500" onclick="runConfetti()">
+            <img src="~/images/bayrak-Photoroom.png" alt="German and Turkish Flags" class="w-48 h-48 sm:w-64 sm:h-64 object-contain drop-shadow-2xl hover:rotate-6 transition duration-500" />
+        </div>
+    </div>
+
+    <!-- 2. Orta Panel: Hero -->
+    <div class="lg:col-span-6 space-y-8 mb-8 lg:mb-0">
+        <section id="hero" class="bg-gradient-to-br from-pink-400 via-cyan-400 to-purple-600 text-white py-16 flex items-center justify-center shadow-2xl rounded-2xl transform rotate-1 transition duration-500 hover:rotate-0">
+            <div class="text-center px-4 sm:px-6">
+                <h2 class="text-4xl font-black mb-4 leading-tight drop-shadow-xl">
+                    Almanca'yı <span class="text-yellow-200">Eğlenerek</span> Öğren!
+                </h2>
+                <p class="text-lg mb-8 font-light opacity-90 max-w-lg mx-auto italic">
+                    Sihirli dersler, rengarenk kelime kartları ve süper skorlarla dil yolculuğuna başla.
+                </p>
+                <a href="@Url.Action("Lessons", "Home")"
+                   class="inline-flex items-center justify-center px-8 py-3 border-4 border-yellow-200 text-base font-extrabold rounded-full shadow-2xl text-purple-700 bg-yellow-300 hover:bg-yellow-200 transition duration-300 transform hover:scale-110 active:scale-100 focus:outline-none focus:ring-4 focus:ring-yellow-300/50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Derslere Başla
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- 3. Sağ Panel: Quiz ve Leaderboard -->
+    <div class="lg:col-span-3 space-y-8">
+        <!-- Quiz Section -->
+        <!-- Inline Quiz for speed -->
+         <section id="sınav" class="bg-white p-6 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+            <h2 class="text-xl font-extrabold text-purple-900 text-center mb-6 border-b-2 border-yellow-300 pb-3">
+                Hızlı Çeviri Pratiği ✨
+            </h2>
+            <div id="quiz-container">
+                 <p class="text-sm font-medium text-gray-700 mb-4">
+                    Soru: <span id="quiz-question-text" class="text-green-600 font-extrabold text-lg">Yükleniyor...</span>
+                </p>
+
+                <input type="text" id="quiz-answer-input"
+                       placeholder="Cevabını buraya yaz..."
+                       class="w-full p-3 border-2 border-pink-300 rounded-lg focus:ring-pink-500 focus:border-pink-500 text-base mb-4 transition duration-200" />
+
+                <div class="flex space-x-2 mb-4">
+                    <button id="check-answer-btn" onclick="checkGeneralQuizAnswer()"
+                            class="flex-1 px-3 py-2 bg-pink-600 text-white font-bold rounded-lg shadow-md hover:bg-pink-700 transition duration-300 transform active:scale-98 focus:outline-none focus:ring-4 focus:ring-pink-300">
+                        Kontrol Et
+                    </button>
+                    <button class="px-3 py-2 bg-yellow-300 text-purple-900 rounded-lg shadow-md hover:bg-yellow-400 transition duration-300 flex items-center justify-center transform active:scale-98 focus:outline-none focus:ring-4 focus:ring-yellow-300" onclick="showHint()">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                    </button>
+                    <button onclick="loadNewQuizQuestion()"
+                            class="px-3 py-2 bg-purple-200 text-purple-800 font-bold rounded-lg shadow-md hover:bg-purple-300 transition duration-300 flex items-center justify-center transform active:scale-98 focus:outline-none focus:ring-4 focus:ring-purple-300">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 12"/><path d="M3 3v9h9"/></svg>
+                    </button>
+                </div>
+                 <div id="quiz-feedback" class="hidden p-3 rounded-lg text-white font-extrabold shadow-inner text-sm"></div>
+            </div>
+        </section>
+
+        <!-- Leaderboard (Client-side mock for now) -->
+        <section class="bg-pink-100 rounded-2xl p-4 shadow-2xl border-4 border-purple-300">
+             <h2 class="text-xl font-extrabold text-purple-600 text-center mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                Süper Kızlar Sıralaması (Top 10)
+            </h2>
+            <div class="bg-white rounded-lg p-3 shadow-inner border border-purple-200">
+                <ul class="space-y-2" id="leaderboard-list">
+                    <!-- Populated by JS -->
+                </ul>
+            </div>
+             <p class="mt-4 text-xs text-purple-500 text-center opacity-70">
+                (Yerel Skorlar)
+            </p>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="text-center mt-2">
+                    <button id="reset-score-btn" class="text-xs text-red-500 hover:text-red-700 underline cursor-pointer">
+                        Puanımı Sıfırla (Admin Only)
+                    </button>
+                </div>
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Pass vocabulary data to JS
+        window.vocabularyData = @Json.Serialize(Model.Vocabulary);
+    </script>
+}

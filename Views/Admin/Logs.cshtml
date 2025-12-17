@@ -1,0 +1,65 @@
+@model List<GermanLearningApp.Mvc.Services.LogEntry>
+
+@{
+    ViewData["Title"] = "Olay Kayıtları (Logs)";
+    Layout = "_Layout";
+}
+
+<div class="container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold"><i class="bi bi-journal-text text-muted me-2"></i>Olay Kayıtları</h2>
+        <a asp-controller="Admin" asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-1"></i> Panale Dön
+        </a>
+    </div>
+
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th scope="col">Zaman</th>
+                            <th scope="col">Kullanıcı</th>
+                            <th scope="col">İşlem</th>
+                            <th scope="col">Detay</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var log in Model)
+                            {
+                                <tr>
+                                    <td class="text-nowrap text-muted small">@log.Timestamp.ToString("dd.MM.yyyy HH:mm:ss")</td>
+                                    <td class="fw-bold text-primary">@log.Username</td>
+                                    <td>
+                                        @{
+                                            var badgeClass = log.Action switch
+                                            {
+                                                "Login" => "success",
+                                                "LoginFailed" => "danger",
+                                                "Logout" => "danger",
+                                                _ => "info"
+                                            };
+                                        }
+                                        <span class="badge bg-@badgeClass rounded-pill">
+                                            @log.Action
+                                        </span>
+                                    </td>
+                                    <td class="text-muted small">@log.Details</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center py-4 text-muted">Henüz kayıt yok.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

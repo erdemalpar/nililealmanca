@@ -1,0 +1,65 @@
+@model GermanLearningApp.Mvc.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Kayıt Ol";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kayıt Ol - DeutschBlitz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .blob { position: absolute; filter: blur(40px); z-index: -1; opacity: 0.6; }
+    </style>
+</head>
+<body class="bg-cyan-50 min-h-screen flex items-center justify-center relative overflow-hidden">
+    
+    <!-- Background Blobs -->
+    <div class="blob bg-pink-300 w-72 h-72 rounded-full top-0 right-0 mix-blend-multiply animate-pulse"></div>
+    <div class="blob bg-purple-300 w-72 h-72 rounded-full bottom-0 left-0 mix-blend-multiply animate-pulse" style="animation-delay: 2s"></div>
+    
+    <div class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-2xl w-full max-w-md border-4 border-white relative z-10">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold text-cyan-700 mb-2">Aramıza Katıl! ✨</h1>
+            <p class="text-gray-600">Almanca öğrenmeye başlamak için kaydol.</p>
+        </div>
+
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm font-bold mb-4 text-center"></div>
+
+            <div class="mb-4">
+                <label asp-for="Username" class="block text-sm font-bold text-gray-700 mb-2">Kullanıcı Adı</label>
+                <input asp-for="Username" class="w-full px-4 py-3 rounded-xl border-2 border-cyan-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 transition bg-white/50" placeholder="Örn: Nil" />
+                <span asp-validation-for="Username" class="text-red-500 text-xs"></span>
+            </div>
+
+             <div class="mb-4">
+                <label asp-for="Class" class="block text-sm font-bold text-gray-700 mb-2">Sınıf</label>
+                <input asp-for="Class" class="w-full px-4 py-3 rounded-xl border-2 border-cyan-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 transition bg-white/50" placeholder="Örn: 3/D" />
+                <span asp-validation-for="Class" class="text-red-500 text-xs"></span>
+            </div>
+
+            <div class="mb-6">
+                <label asp-for="Password" class="block text-sm font-bold text-gray-700 mb-2">Şifre</label>
+                <input asp-for="Password" type="password" class="w-full px-4 py-3 rounded-xl border-2 border-cyan-200 focus:border-cyan-500 focus:ring focus:ring-cyan-200 transition bg-white/50" placeholder="******" />
+                <span asp-validation-for="Password" class="text-red-500 text-xs"></span>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:from-cyan-700 hover:to-blue-700 transform hover:scale-[1.02] transition duration-200">
+                Kayıt Ol 📝
+            </button>
+            
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-500">Zaten hesabın var mı?</p>
+                <a asp-action="Login" class="text-cyan-600 font-bold hover:underline">Giriş Yap</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

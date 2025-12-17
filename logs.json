@@ -1,0 +1,518 @@
+[
+  {
+    "Timestamp": "2025-12-15T11:29:24.030159+03:00",
+    "Action": "Logout",
+    "Username": "Y\u00F6netici",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:29:37.6114461+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:30:03.5327601+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:30:16.3097418+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:31:01.4034378+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:31:11.807149+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:31:30.0497381+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:31:39.7060978+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:40:20.9987198+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:40:38.7661819+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:40:53.6417257+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:41:16.3590781+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:51:38.8210698+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:51:48.4892877+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:54:02.9153504+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:54:15.4809733+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T11:54:46.2189446+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T11:55:45.0279437+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T12:40:00.9057016+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T12:46:30.7026204+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T12:46:44.0414427+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:05:24.0652411+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:05:34.0981872+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:05:47.2050899+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:05:55.2784858+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:06:30.2196828+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:06:37.8826375+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:06:46.2731434+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:06:56.6974831+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:07:09.8807132+03:00",
+    "Action": "LoginFailed",
+    "Username": "admin",
+    "Details": "Hatal\u0131 \u015Fifre veya kullan\u0131c\u0131 ad\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:07:22.4158624+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:08:20.451962+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:08:29.1432121+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:08:36.8469264+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:14:04.2963792+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:14:12.173717+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:14:45.7961519+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:15:16.8219892+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:29:32.1637323+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:29:39.8956539+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:29:50.2346081+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:30:05.5898952+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:30:22.0013946+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:30:30.4792194+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:30:48.2842128+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:31:00.0979288+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:31:10.004243+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:31:27.7799669+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:31:34.0307303+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:31:42.6068937+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:32:40.083089+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:32:47.6960421+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:33:05.1806083+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:33:13.8845011+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:33:28.2559852+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:33:35.4516297+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:33:50.2877807+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:57:50.9751939+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:58:01.3200289+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T13:59:11.5964635+03:00",
+    "Action": "UpdatePermissions",
+    "Username": "admin",
+    "Details": "nil kullan\u0131c\u0131s\u0131n\u0131n izinleri g\u00FCncellendi."
+  },
+  {
+    "Timestamp": "2025-12-15T13:59:19.7652897+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T13:59:29.8422146+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T14:00:22.7849965+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T14:00:45.9072882+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T22:20:00.9926578+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T22:20:23.7395701+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-15T22:25:37.9338968+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-15T22:25:56.3835542+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T17:56:18.7528614+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T17:56:27.1876813+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T19:18:00.8534651+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T19:18:08.2974302+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T19:18:50.2814297+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T19:18:59.9724495+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T19:22:15.9965096+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T19:22:22.5185558+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T19:28:36.949719+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T19:28:44.313223+03:00",
+    "Action": "Login",
+    "Username": "nil",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-16T19:37:16.7487004+03:00",
+    "Action": "Logout",
+    "Username": "nil",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-16T19:37:23.3484029+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-17T18:55:42.0516807+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-17T19:01:24.6290308+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-17T19:26:23.5213514+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-17T19:27:05.7350689+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  },
+  {
+    "Timestamp": "2025-12-17T19:28:08.2982124+03:00",
+    "Action": "Logout",
+    "Username": "admin",
+    "Details": "\u00C7\u0131k\u0131\u015F yap\u0131ld\u0131"
+  },
+  {
+    "Timestamp": "2025-12-17T19:28:12.9636867+03:00",
+    "Action": "Login",
+    "Username": "admin",
+    "Details": "Ba\u015Far\u0131l\u0131 giri\u015F"
+  }
+]

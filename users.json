@@ -1,0 +1,18 @@
+[
+  {
+    "Username": "admin",
+    "Password": "5225",
+    "Role": "Admin",
+    "Class": null,
+    "AllowedPages": []
+  },
+  {
+    "Username": "nil",
+    "Password": "123",
+    "Role": "User",
+    "Class": "10-A",
+    "AllowedPages": [
+      "/lesson/details/1"
+    ]
+  }
+]

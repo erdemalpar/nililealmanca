@@ -1,0 +1,64 @@
+@model GermanLearningApp.Mvc.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Giriş Yap";
+    Layout = null; // Use a standalone layout or no layout for login page to keep it clean
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap - DeutschBlitz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .blob { position: absolute; filter: blur(40px); z-index: -1; opacity: 0.6; }
+    </style>
+</head>
+<body class="bg-pink-50 min-h-screen flex items-center justify-center relative overflow-hidden">
+    
+    <!-- Background Blobs -->
+    <div class="blob bg-purple-300 w-72 h-72 rounded-full top-0 left-0 mix-blend-multiply animate-pulse"></div>
+    <div class="blob bg-yellow-300 w-72 h-72 rounded-full bottom-0 right-0 mix-blend-multiply animate-pulse" style="animation-delay: 2s"></div>
+    <div class="blob bg-pink-300 w-72 h-72 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mix-blend-multiply animate-pulse" style="animation-delay: 4s"></div>
+
+    <div class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-2xl w-full max-w-md border-4 border-white">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold text-purple-900 mb-2">Hoş Geldin! 👋</h1>
+            <p class="text-gray-600">Almanca macerana devam etmek için giriş yap.</p>
+        </div>
+
+        <form asp-action="Login" method="post" asp-route-returnUrl="@ViewData["ReturnUrl"]">
+            <div asp-validation-summary="ModelOnly" class="text-red-500 text-sm font-bold mb-4 text-center"></div>
+
+            <div class="mb-6">
+                <label asp-for="Username" class="block text-sm font-bold text-gray-700 mb-2">Kullanıcı Adı</label>
+                <input asp-for="Username" class="w-full px-4 py-3 rounded-xl border-2 border-purple-200 focus:border-purple-500 focus:ring focus:ring-purple-200 transition bg-white/50" placeholder="Örn: nil" />
+                <span asp-validation-for="Username" class="text-red-500 text-xs"></span>
+            </div>
+
+            <div class="mb-6">
+                <label asp-for="Password" class="block text-sm font-bold text-gray-700 mb-2">Şifre</label>
+                <input asp-for="Password" type="password" class="w-full px-4 py-3 rounded-xl border-2 border-purple-200 focus:border-purple-500 focus:ring focus:ring-purple-200 transition bg-white/50" placeholder="******" />
+                <span asp-validation-for="Password" class="text-red-500 text-xs"></span>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg hover:from-purple-700 hover:to-pink-700 transform hover:scale-[1.02] transition duration-200">
+                Giriş Yap 🚀
+            </button>
+            
+            <div class="mt-6 text-center">
+                <a asp-action="Register" class="inline-block border-2 border-purple-300 text-purple-700 font-bold py-2 px-6 rounded-full hover:bg-purple-50 transition duration-200">
+                    Kayıt Ol ✨
+                </a>
+            </div>
+
+            <p class="text-xs text-center text-gray-400 mt-6">
+            </p>
+        </form>
+    </div>
+
+</body>
+</html>
